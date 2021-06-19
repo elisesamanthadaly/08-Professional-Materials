@@ -1,0 +1,189 @@
+/* Page Formatting */
+:root {
+    --header-bar: #3f3731;
+    --header-highlight: #e55a48;
+    --nav-text: white;
+    --main-background: #dacbbe;
+    --main-text: black;
+    background: var(--main-background);
+    color: var(--main-text);
+    font-family: sans-serif;
+}
+
+/* Header/Navigation Bar */
+#header-nav-bar {
+    background: var(--header-bar);
+    color: var(--header-bar);
+}
+
+h1 {
+    display: inline-block;
+    font-size: 32pt;
+    font-weight: bold;
+}
+
+#elise-daly {
+    background: var(--header-highlight);
+}
+
+nav {
+    float: right;
+    margin-top: 20px;
+    margin-right: 5%;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+#header-nav-bar a {
+    color: var(--nav-text);
+    font-size: 16pt;
+    text-underline-position: under;
+}
+
+/* Hero Image/Subtitle */
+#mainpage-hero {
+    width: 100%;
+    height: 250px;
+}
+
+#hero-subtitle {
+    background: var(--header-highlight);
+    color: var(--header-bar);
+    font-size: 24pt;
+    font-weight: bold;
+    float: right;
+    position: relative;
+    bottom: 75px;
+}
+
+/* Main Content */
+
+.flex-container {
+  display: flex;
+}
+
+main header {
+    font-size: 32pt;
+    font-weight: bold;
+    width: 25%;
+    text-align: right;
+    border-right-color: var(--main-text);
+    border-right-style: solid;
+    border-width: 3px;
+    padding-right: 10px;
+}
+
+p {
+    width: 65%;
+    padding-left: 25px;
+}
+
+li {
+    list-style-type: none;
+}
+
+li:before {
+    content: "\25BA \0020";
+    font-size: 9px;
+    position: relative;
+    bottom: 3px;
+    left: -10px;
+}
+
+a {
+    color: var(--main-text);
+}
+
+/* Work */
+
+#cards {
+    width: 65%;
+    padding-left: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#main-work-card {
+    width: 100%;
+    border-color: var(--header-highlight);
+    border-style: solid;
+    border-width: 3px;
+}
+
+#work img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+#work img:hover {
+    opacity: 1.0;
+}
+
+.card-tag {
+    background: var(--header-highlight);
+    color: var(--header-bar);
+    width: 150px;
+    position: relative;
+    bottom: 80px;
+    padding: 10px;
+    padding-left: 15px;
+}
+
+#main-work-card .card-tag {
+    width: 300px;
+}
+
+#work-card-1 .card-tag {
+    width: 250px;
+}
+
+.card-title {
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 11pt;
+    padding: 3px 0;
+}
+
+.work-card {
+    width: 49%;
+    margin-top: 15px;
+    border-color: var(--header-highlight);
+    border-style: solid;
+    border-width: 3px;
+}
+
+/* On tablets/smartphones, navigation bar moves under developer name */
+@media screen and (max-width: 992px) {
+    #header-nav-bar {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    nav {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin-left: 12.5px;
+        margin-right: 12.5px;
+    }
+}
+
+/* On smartphones, secondary work cards become larger for easier viewing */
+@media screen and (max-width: 768px) {
+    .work-card {
+        width: 100%;
+    }
+}
