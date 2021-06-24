@@ -26,6 +26,7 @@ header {
 
 header h1 {
     background: var(--header-highlight);
+    width: 260px;
     color: var(--header-bar);
     font-size: 32pt;
     font-weight: bold;
@@ -117,4 +118,85 @@ main ul li {
     font-size: 12pt;
     font-weight: 500pt;
     list-style-type: circle;
+}
+
+/* Tablets */
+@media screen and (max-width: 1130px) {
+    #about {
+        height: 425px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    nav ul li {
+        margin: 0 5px 0 10px;
+    }
+
+    #about img {
+        height: 200px;
+        width: 200px;
+    }
+    
+    #about p {
+        height: 200px;
+        margin: 50px 155px 0 0;
+        line-height: 18pt;
+    }
+
+    figure img {
+        height: 225.625px;
+        width: 480px;
+    }
+}
+
+/* Smartphones */
+@media screen and (max-width: 768px) {
+    header {
+        height: 350px;
+        width: 100%;
+        position: relative;
+    }
+
+    .flex-container {
+        display: inline-block;
+    }
+
+    nav ul {
+        position: absolute;
+        right: 5px;
+    }
+
+    nav ul li {
+        text-align: right;
+    }
+
+    section {
+        margin: 25px;
+        padding: 25px;
+    }
+
+    main h2 {
+        width: 225px;
+        right: 25px;
+    }
+
+    #about {
+        height: 500px;
+    }
+
+    #about img {
+        height: 150px;
+        width: 150px;
+    }
+
+    #about p {
+        height: 150px;
+        margin: 50px 105px 0 0;
+        line-height: 16pt;
+    }
+
+    figure img {
+        height: 169.21875px;
+        width: 360px;
+    }
 }
